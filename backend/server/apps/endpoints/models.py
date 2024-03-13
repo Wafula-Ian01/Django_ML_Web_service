@@ -32,7 +32,7 @@ class MLAlgorithm(models.Model):
     code=models.CharField(max_length=50000)
     version=models.CharField(max_length=128)
     owner=models.CharField(max_length=128)
-    created_at=models.DateTimeField(auto_now_date=True, blank= True)
+    created_at=models.DateTimeField(auto_now_add=True, blank= True)
     parent_endpoint=models.ForeignKey(Endpoint, on_delete= models.CASCADE)
     
 class MLAlgorithmStatus(models.Model):
